@@ -1,13 +1,13 @@
 {
   "env": {
     "browser": true,
-    "es2020": true,
-    "node": true,
-    "jest": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "plugin:react/recommended",
     "standard",
+    "prettier",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
     "prettier/standard",
@@ -28,6 +28,8 @@
     "react/prop-types": "off",
     "no-use-before-define": "off",
     "no-unused-vars": "off",
+    "no-tabs": "off",
+    "no-irregular-whitespace": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "no-unused-expressions": "off",
