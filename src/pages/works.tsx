@@ -3,18 +3,33 @@ import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Gallery from 'react-grid-gallery'
 
-import { getAllWorks } from '../utils/works'
-
-import { images } from '../data/ImagesData'
+import { graphQLClient } from './api/graphql'
 
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 
 import { Container } from '../styles/pages/Works'
 
-export default function Home(props): JSX.Element {
-  console.log(props)
+type WorkProps = {
+  imageJob: string
+  link: string
+  thumbnailwidth: number
+  thumbnailheight: number
+}
 
+type ImagesProps = {
+  link: string
+  src: string
+  thumbnail: string
+  thumbnailHeight: number
+  thumbnailWidth: number
+}
+
+type HomeProps = {
+  images: ImagesProps[]
+}
+
+export default function Home({ images }: HomeProps): JSX.Element {
   function handleClickOnImage(id: number) {
     const selectedImage = images[id]
 
@@ -52,11 +67,33 @@ export default function Home(props): JSX.Element {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const results = await getAllWorks()
+  const query = `
+      query {
+        works {
+          uid
+          link
+          imageJob
+          thumbnailheight
+          thumbnailwidth
+        }
+      }
+    `
+
+  const { data } = await graphQLClient.executeOperation({ query })
+
+  const images = data.works.map((work: WorkProps) => {
+    return {
+      src: work.imageJob,
+      link: work.link,
+      thumbnail: work.imageJob,
+      thumbnailWidth: Number(work.thumbnailwidth),
+      thumbnailHeight: Number(work.thumbnailheight)
+    }
+  })
 
   return {
     props: {
-      results
+      images
     }
   }
 }
