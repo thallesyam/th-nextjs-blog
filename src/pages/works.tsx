@@ -12,7 +12,7 @@ export default function Home(): JSX.Element {
   function handleClickOnImage(id: number) {
     const selectedImage = images[id]
 
-    if (selectedImage) {
+    if (selectedImage.link) {
       window.open(selectedImage.link, '_blank')
     }
   }
