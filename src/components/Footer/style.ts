@@ -11,9 +11,23 @@ export const Container = styled.footer`
   justify-content: center;
   align-items: center;
 
+  flex-direction: column;
+
   p {
     font-size: 1rem;
     font-weight: 300;
     color: var(--grayLight);
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    path {
+      fill: var(--whiteText);
+    }
   }
 `

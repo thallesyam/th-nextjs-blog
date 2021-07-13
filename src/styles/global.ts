@@ -41,6 +41,10 @@ export default createGlobalStyle`
     color: #000;
   }
 
+  .ReactGridGallery_tile-viewport, .ReactGridGallery_tile {
+    border-radius: 1rem;
+  }
+
 
   :root {
     --background: ${props => props.theme.colors.background};

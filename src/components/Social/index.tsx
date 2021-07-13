@@ -11,7 +11,7 @@ import Behance from '../../assets/Behance.svg'
 type SocialProps = {
   IconComponent: string
   link: string
-  transparent?: boolean
+  isTransparent?: boolean
 }
 
 const component = {
@@ -24,12 +24,12 @@ const component = {
 export const Social = ({
   IconComponent,
   link,
-  transparent = false
+  isTransparent = false
 }: SocialProps): JSX.Element => {
   const Icon = component[IconComponent]
 
   return (
-    <Container className={transparent && 'transparent'}>
+    <Container className={isTransparent && 'transparent'}>
       <Link href={link}>
         <a>
           <Icon />
