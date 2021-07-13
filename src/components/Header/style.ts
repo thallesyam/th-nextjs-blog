@@ -5,6 +5,8 @@ export const Container = styled.header`
   max-width: 62rem;
   margin: 0 auto;
 
+  min-height: 120px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,6 +40,11 @@ export const Container = styled.header`
       a {
         color: var(--whiteText);
         font-size: 1.25rem;
+        transition: filter 0.2s;
+
+        &:hover {
+          filter: brightness(0.8);
+        }
       }
     }
   }
