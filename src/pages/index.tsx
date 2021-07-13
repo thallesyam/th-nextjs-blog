@@ -4,6 +4,7 @@ import { Container } from '../styles/pages/Home'
 
 import { Header } from '../components/Header'
 import { Social } from '../components/Social'
+import { Footer } from '../components/Footer'
 
 export default function Home(): JSX.Element {
   return (
@@ -35,6 +36,8 @@ export default function Home(): JSX.Element {
           </ul>
         </section>
       </Container>
+
+      <Footer />
     </>
   )
 }

@@ -21,6 +21,7 @@ export default createGlobalStyle`
     background: var(--background);
     font-family: 'Josefin Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
+    height: 100vh
   }
 
   ol, ul {
