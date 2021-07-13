@@ -44,6 +44,7 @@ export default createGlobalStyle`
   :root {
     --background: ${props => props.theme.colors.background};
     --white: ${props => props.theme.colors.white};
+    --whiteText: ${props => props.theme.colors.whiteText};
     --black: ${props => props.theme.colors.black};
     --grayLight: ${props => props.theme.colors.grayLight};
     --grayMedium: ${props => props.theme.colors.grayMedium};

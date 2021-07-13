@@ -1,11 +1,13 @@
 import React from 'react'
 
+import { Header } from '../components/Header'
+
 export default function Home(): JSX.Element {
   return (
-    <div>
-      <main>
-        <h1>Olá Thalles</h1>
-      </main>
-    </div>
+    <>
+      <Header />
+
+      <main></main>
+    </>
   )
 }
