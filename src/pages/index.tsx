@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 import { Container } from '../styles/pages/Home'
 
@@ -9,6 +10,10 @@ import { Footer } from '../components/Footer'
 export default function Home(): JSX.Element {
   return (
     <>
+      <Head>
+        <title>TH-Blog | Home</title>
+      </Head>
+
       <Header />
 
       <Container>

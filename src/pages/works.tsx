@@ -1,5 +1,9 @@
 import React from 'react'
+import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import Gallery from 'react-grid-gallery'
+
+import { getAllWorks } from '../utils/works'
 
 import { images } from '../data/ImagesData'
 
@@ -8,7 +12,9 @@ import { Footer } from '../components/Footer'
 
 import { Container } from '../styles/pages/Works'
 
-export default function Home(): JSX.Element {
+export default function Home(props): JSX.Element {
+  console.log(props)
+
   function handleClickOnImage(id: number) {
     const selectedImage = images[id]
 
@@ -19,6 +25,10 @@ export default function Home(): JSX.Element {
 
   return (
     <>
+      <Head>
+        <title>TH-Blog | Trabalhos</title>
+      </Head>
+
       <Header />
 
       <Container>
@@ -39,4 +49,14 @@ export default function Home(): JSX.Element {
       <Footer isIcon />
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const results = await getAllWorks()
+
+  return {
+    props: {
+      results
+    }
+  }
 }
