@@ -1,6 +1,7 @@
 import { ApolloServer, gql } from 'apollo-server-micro'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { getAllWorks } from '../../utils/works'
+import { getAllPosts } from '../../utils/posts'
 
 const typeDefs = gql`
   type Work {
@@ -12,8 +13,19 @@ const typeDefs = gql`
     thumbnailwidth: String
   }
 
+  type Post {
+    uid: String
+    createdAt: String
+    image: String
+    title: String
+    content: String
+    resume: String
+    slug: String
+  }
+
   type Query {
     works: [Work]
+    posts: [Post]
     sayHello: String
   }
 `
@@ -22,6 +34,9 @@ const resolvers = {
   Query: {
     works() {
       return getAllWorks()
+    },
+    posts() {
+      return getAllPosts()
     },
     sayHello() {
       return 'Hello World!'
