@@ -31,15 +31,21 @@ export const Container = styled.main`
     > div {
       background: var(--grayMedium);
       border-radius: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
       img {
         width: 100%;
         height: 224px;
         object-fit: cover;
-        margin-bottom: 1.37rem;
+        border-radius: 1rem 1rem 0 0;
       }
 
       section {
-        padding: 1rem;
+        padding: 0 1rem 1rem;
 
         .title {
           h1,
@@ -65,7 +71,7 @@ export const Container = styled.main`
           margin: 1rem 0;
 
           > p {
-            font-size: 1.125rem;
+            font-size: 0.8rem;
             font-weight: 400;
           }
         }
