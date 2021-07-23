@@ -27,13 +27,19 @@ export default function Home(): JSX.Element {
 
           <ul>
             <li>
-              <Social IconComponent={'Linkedin'} link="/" />
+              <Social
+                IconComponent={'Linkedin'}
+                link="https://www.linkedin.com/in/thalles-ian/"
+              />
             </li>
             <li>
               <Social IconComponent={'Figma'} link="/" />
             </li>
             <li>
-              <Social IconComponent={'Dribble'} link="/" />
+              <Social
+                IconComponent={'Dribble'}
+                link="https://github.com/thallesyam"
+              />
             </li>
             <li>
               <Social IconComponent={'Behance'} link="/" />

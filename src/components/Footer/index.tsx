@@ -14,13 +14,21 @@ export const Footer = ({ isIcon = false }: FooterProps): JSX.Element => {
       {isIcon && (
         <ul>
           <li>
-            <Social IconComponent={'Linkedin'} link="/" isTransparent />
+            <Social
+              IconComponent={'Linkedin'}
+              link="https://www.linkedin.com/in/thalles-ian/"
+              isTransparent
+            />
           </li>
           <li>
             <Social IconComponent={'Figma'} link="/" isTransparent />
           </li>
           <li>
-            <Social IconComponent={'Dribble'} link="/" isTransparent />
+            <Social
+              IconComponent={'Dribble'}
+              link="https://github.com/thallesyam"
+              isTransparent
+            />
           </li>
           <li>
             <Social IconComponent={'Behance'} link="/" isTransparent />
