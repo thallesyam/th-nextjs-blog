@@ -49,9 +49,7 @@ const resolvers = {
     posts() {
       return getAllPosts()
     },
-    post(parent, args, context, info) {
-      console.log(args.uid)
-
+    post(_parent, args, _context, _info) {
       return getOnePost(args.uid)
     },
     sayHello() {
