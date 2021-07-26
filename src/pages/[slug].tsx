@@ -26,7 +26,7 @@ type BlogProps = {
 
 export default function Post({ post }: BlogProps): JSX.Element {
   const { isFallback } = useRouter()
-  const titleFormated = post.title.split('<h1>')[1].split('</h1>')[0]
+  const titleFormated = post?.title.split('<h1>')[1].split('</h1>')[0]
 
   if (isFallback) {
     return <p>Loading...</p>
