@@ -89,6 +89,14 @@ Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações
 
 ---
 
+## Sobre o Layout:
+
+O Layout foi encontrado nos trabalhos do incrível designer
+
+https://www.figma.com/@carlux
+
+---
+
 ## Autor
 
 Feito por Thalles Ian 👋🏽 Entre em contato!
