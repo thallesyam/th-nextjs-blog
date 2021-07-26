@@ -20,6 +20,7 @@ O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação em Rea
 A aplicação foi desenvolvida utilizando o framework NextJS aplicando os conceitos de Static Site Generation (SSG) e utilizando Prismic CMS  e Graphql para adição e gerenciamento do conteúdo dos posts.
 
 O projeto foi desenvolvido para estudo de como funciona o GraphQl integrado ao NextJs e ao Prismic CMS.
+
 ---
 
 ## Tecnologias
