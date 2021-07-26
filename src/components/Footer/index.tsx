@@ -21,17 +21,7 @@ export const Footer = ({ isIcon = false }: FooterProps): JSX.Element => {
             />
           </li>
           <li>
-            <Social IconComponent={'Figma'} link="/" isTransparent />
-          </li>
-          <li>
-            <Social
-              IconComponent={'Dribble'}
-              link="https://github.com/thallesyam"
-              isTransparent
-            />
-          </li>
-          <li>
-            <Social IconComponent={'Behance'} link="/" isTransparent />
+            <Social IconComponent={'Github'} link="/" isTransparent />
           </li>
         </ul>
       )}

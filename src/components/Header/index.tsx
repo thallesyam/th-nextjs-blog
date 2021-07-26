@@ -13,7 +13,11 @@ export const Header = (): JSX.Element => {
 
   return (
     <Container>
-      <Logo />
+      <Link href="/">
+        <a>
+          <Logo />
+        </a>
+      </Link>
 
       <ul>
         {headerData.map(item => {

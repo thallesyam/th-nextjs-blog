@@ -4,9 +4,7 @@ import Link from 'next/link'
 import { Container } from './style'
 
 import Linkedin from '../../assets/Linkedin.svg'
-import Figma from '../../assets/Figma.svg'
-import Dribble from '../../assets/Dribble.svg'
-import Behance from '../../assets/Behance.svg'
+import Github from '../../assets/Github.svg'
 
 type SocialProps = {
   IconComponent: string
@@ -16,9 +14,7 @@ type SocialProps = {
 
 const component = {
   Linkedin,
-  Figma,
-  Dribble,
-  Behance
+  Github
 }
 
 export const Social = ({

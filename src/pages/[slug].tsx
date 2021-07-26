@@ -2,7 +2,7 @@ import React from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 import Head from 'next/head'
-// import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { graphQLClient } from './api/graphql'
 
@@ -25,9 +25,12 @@ type BlogProps = {
 }
 
 export default function Post({ post }: BlogProps): JSX.Element {
+  const { isFallback } = useRouter()
   const titleFormated = post.title.split('<h1>')[1].split('</h1>')[0]
 
-  console.log(post)
+  if (isFallback) {
+    return <p>Loading...</p>
+  }
 
   return (
     <>
@@ -75,7 +78,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { slug: post.slug }
   }))
 
-  return { paths, fallback: false }
+  return { paths, fallback: true }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

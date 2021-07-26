@@ -43,7 +43,8 @@ export const Container = styled.main`
   }
 
   > div {
-    width: 61rem;
+    width: 100%;
+    max-width: 61rem;
     background-color: var(--grayMedium);
 
     border-radius: 0.5rem;

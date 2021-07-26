@@ -9,6 +9,20 @@ export const Container = styled.main`
   align-items: center;
   flex-direction: column;
 
+  padding: 0 1rem;
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .column {
+    grid-template-columns: 1fr;
+  }
+
   h1 {
     margin-top: 5.625rem;
 
@@ -18,6 +32,23 @@ export const Container = styled.main`
     color: var(--whiteText);
   }
 
+  > div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+
+    width: 100%;
+
+    a {
+      cursor: pointer;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+  }
+
   > section {
     min-height: 20rem;
 
@@ -25,7 +56,6 @@ export const Container = styled.main`
     margin-bottom: 11rem;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 1.25rem;
 
     > div {
@@ -35,8 +65,6 @@ export const Container = styled.main`
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-
       img {
         width: 100%;
         height: 224px;

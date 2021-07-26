@@ -9,6 +9,10 @@ export const Container = styled.main`
   justify-content: center;
   flex-direction: column;
 
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+
   h1 {
     font-size: 3.5rem;
     font-weight: 700;

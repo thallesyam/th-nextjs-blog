@@ -33,16 +33,10 @@ export default function Home(): JSX.Element {
               />
             </li>
             <li>
-              <Social IconComponent={'Figma'} link="/" />
-            </li>
-            <li>
               <Social
-                IconComponent={'Dribble'}
+                IconComponent={'Github'}
                 link="https://github.com/thallesyam"
               />
-            </li>
-            <li>
-              <Social IconComponent={'Behance'} link="/" />
             </li>
           </ul>
         </section>

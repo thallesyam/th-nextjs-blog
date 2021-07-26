@@ -13,6 +13,10 @@ export const Container = styled.header`
 
   padding: 1.5rem;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   .active {
     color: var(--primary);
 
@@ -33,6 +37,10 @@ export const Container = styled.header`
   > ul {
     display: flex;
     gap: 1.5rem;
+
+    @media (max-width: 768px) {
+      margin-top: 2rem;
+    }
 
     li {
       position: relative;
